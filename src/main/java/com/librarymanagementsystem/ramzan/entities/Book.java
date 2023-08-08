@@ -2,12 +2,21 @@ package com.librarymanagementsystem.ramzan.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name="books_table")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

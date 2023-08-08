@@ -39,6 +39,17 @@ public class BookAllocation {
     @Type(type = "org.hibernate.type.UUIDCharType")
     private Librarian issuedBy;
 
+    @Column(updatable = false, nullable = false, columnDefinition = "VARCHAR(36)", name = "issued_on")
+    private Long issuedOnTimeStamp = System.currentTimeMillis() / 1000; // epoch timestamp
+
+    @Column(nullable = false, name = "returned_status")
+    private boolean returnedStatus = false;
+
+    @Column(columnDefinition = "VARCHAR(36)", name = "return_on")
+    private Long returTimeStamp; // epoch Timestamp
+
+
+
 
 
 
